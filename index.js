@@ -108,7 +108,7 @@
             requestOptions.data.current = packageInfo.version;
 
             // Check for updates
-            HTTP.post(this.setup.api, requestOptions)
+            HTTP.json(this.setup.api, requestOptions)
                 .on('complete', function(result){
                     // If the request failed
                     if(result instanceof Error){
